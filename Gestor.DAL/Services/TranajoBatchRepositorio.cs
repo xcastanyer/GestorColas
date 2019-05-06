@@ -84,7 +84,7 @@ namespace Gestor.DAL.Services
 
      
 
-        private void GuardarCambios(string tituloMensaje, IFaseDbContext context)
+        private void GuardarCambios(string cabeceraMensajeEnCasoDeError, IFaseDbContext context)
         {
             try
             {
@@ -92,11 +92,11 @@ namespace Gestor.DAL.Services
             }
             catch (System.Data.Entity.Validation.DbEntityValidationException ex)
             {
-                throw new Exception($"No se ha podido marcar el trabajo como correcto. Causa:\n{LeerExcepcionDbEntityValidationException(ex)} ");
+                throw new Exception($"{cabeceraMensajeEnCasoDeError}. Causa:\n{LeerExcepcionDbEntityValidationException(ex)} ");
             }
             catch (Exception ex)
             {
-                throw new Exception($"No se ha podido marcar el trabajo como correcto.", ex);
+                throw new Exception($"{cabeceraMensajeEnCasoDeError}.", ex);
             }
         }
         private string LeerExcepcionDbEntityValidationException(DbEntityValidationException ex)
@@ -110,8 +110,6 @@ namespace Gestor.DAL.Services
                 }
             }
             return errores;
-        }
-
-     
+        }     
     }
 }

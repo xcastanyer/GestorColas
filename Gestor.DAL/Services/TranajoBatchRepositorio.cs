@@ -46,7 +46,6 @@ namespace Gestor.DAL.Services
         {
             MarcarTrabajo(trabajoBatch, EstadoProceso.EnEjecucion);
         }
-
         public void InsertTrabajoTest()
         {
 

@@ -71,11 +71,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IFASE.DAL\Gestor.DAL.csproj">
+    <ProjectReference Include="..\Gestor.DAL\Gestor.DAL.csproj">
       <Project>{95628fa6-9be2-4575-9400-1d4cef4be95e}</Project>
       <Name>Gestor.DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

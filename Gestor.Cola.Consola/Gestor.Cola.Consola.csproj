@@ -65,13 +65,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IFASE.Cola\Gestor.Cola.csproj">
+    <ProjectReference Include="..\Gestor.Cola\Gestor.Cola.csproj">
       <Project>{43240446-73cd-441f-b28b-02b4e6a30fef}</Project>
       <Name>Gestor.Cola</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IFASE.DAL\Gestor.DAL.csproj">
-      <Project>{95628fa6-9be2-4575-9400-1d4cef4be95e}</Project>
-      <Name>Gestor.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
